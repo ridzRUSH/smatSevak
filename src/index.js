@@ -106,7 +106,7 @@ app.post("/check-availability", async (req, res) => {
       isAvailable,
       nextAvailableSlot: {
         date: getNewDate(date, skipDay + 1),
-        time: dataObj[today][0].start,
+        time: dataObj[weekdays[index]][0].start,
       },
     });
   }

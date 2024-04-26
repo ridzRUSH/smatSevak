@@ -96,7 +96,7 @@ app.post("/check-availability", async (req, res) => {
 
   if (nextDay) {
     let skipDay = 0;
-    const index = ((weekdays.indexOf(today) + 1) % 7);
+    let index = ((weekdays.indexOf(today) + 1) % 7);
     if (index == 0) {
       index++;
       skipDay++;
